@@ -1,0 +1,5 @@
+mutation addMessage($object: Message_insert_input = {}) {
+  insert_Message_one(object: $object){
+    IdS
+  }
+}

@@ -1,0 +1,10 @@
+mutation addUser($object: User_insert_input!) {
+  insert_User_one(object: $object){
+    Id
+    FirstName
+    LastName
+    RoleId
+    Email
+    Info
+  }
+}

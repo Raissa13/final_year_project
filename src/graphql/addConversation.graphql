@@ -1,0 +1,8 @@
+mutation addConversation($object: Conversation_insert_input!) {
+  insert_Conversation_one(object: $object) {
+    Id
+    MentorId
+    StudentId
+    ConversationName
+  }
+}

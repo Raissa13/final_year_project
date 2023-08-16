@@ -1,0 +1,16 @@
+query getUserByRole($roleId: Int!) {
+  User(where: {RoleId: {_eq: $roleId}}) {
+    LastName
+    Id
+    FirstName
+    Password
+    RoleId
+    Role {
+      Id
+      Name
+    }
+    UserName
+    Info
+    DOB
+  }
+}

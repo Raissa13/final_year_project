@@ -1,0 +1,16 @@
+query GetUserLogin($userTag: String) {
+  User(where: {UserName: {_eq: $userTag}}) {
+    LastName
+    Id
+    FirstName
+    Password
+    RoleId
+    Role {
+      Id
+      Name
+    }
+    UserName
+    Info
+    DOB
+  }
+}

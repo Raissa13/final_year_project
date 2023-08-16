@@ -1,0 +1,40 @@
+query getConversation($conversationId: uuid_comparison_exp = {}) {
+  Conversation(where: {Id: $conversationId}) {
+    Id
+    ConversationName
+    Messages(order_by: {Created_at: asc}) {
+      Content
+      ReceiverId
+      Created_at
+      SenderId
+     senderInfo: userBySenderid{
+        FirstName
+        LastName
+      }
+      receiverInfo:User{
+        FirstName
+        LastName
+      }
+      Status {
+        Id
+        Name
+      }
+    }
+    Mentor{
+      Id
+      FirstName
+      LastName
+      Info
+      DOB
+    }
+    
+    Student{
+      Id
+      FirstName
+      LastName
+      Info
+      DOB
+    }
+    
+  }
+}
